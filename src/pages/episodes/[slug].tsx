@@ -11,7 +11,23 @@ import { ptBR } from 'date-fns/locale';
 import { api } from '../../services/api';
 import { convertDurationToTimeString } from '../../utils/convertDurationToTimeString';
 
-export default function Episode() {
+type Episode = {
+  id: string,
+  title: string,
+  thumbnail: string,
+  members: string,
+  duration: number;
+  durationAsString: string,
+  description: string,
+  url: string,
+  publishedAt: string
+}
+
+type EpisodeProps = {
+  episode: Episode;
+}
+
+export default function Episode({ episode }) {
 
   const router = useRouter();
   return (
@@ -34,7 +50,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
     url: data.file.url,
   }
   return {
-    props: {},
+    props: {
+      episode
+    },
     revalidate: 60 * 60 * 24 // 60 seconds * 60 minutos (1 hour) * 24 hours
   }
 }
