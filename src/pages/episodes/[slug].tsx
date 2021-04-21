@@ -2,7 +2,7 @@
  * Cria-se uma pagina utilizando entre [] o nome que será utilizado na url
  * neste caso foi utilizado slug
  */
-import { GetStaticProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router'
 
 import { format, parseISO } from 'date-fns';
@@ -27,12 +27,18 @@ type EpisodeProps = {
   episode: Episode;
 }
 
-export default function Episode({ episode }) {
+export default function Episode({ episode }: EpisodeProps) {
 
-  const router = useRouter();
   return (
-    <h1>{router.query.slug}</h1>
+    <h1>{episode.title}</h1>
   )
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: 'blocking'
+  }
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
