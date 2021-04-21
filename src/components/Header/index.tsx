@@ -1,15 +1,19 @@
 import styles from './styles.module.scss'
+import format from 'date-fns/format'
+import ptBR from 'date-fns/locale/pt-BR'
 
 export function Header() {
 
-  const currentDate = new Date().toLocaleDateString()
+  const currentDate = format(new Date(), 'EEEEEE, d MMMM', {
+    locale: ptBR
+  });
 
   return (
     <header className={styles.headerContainer}>
       <img src="/logo.svg" alt="Poadcastr" />
 
       <p>O melhor para você ouvir sempre</p>
-      <span>Qui, 8 abril</span>
+      <span>{currentDate}</span>
     </header>
   );
 }
