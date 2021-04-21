@@ -12,30 +12,10 @@
   }, []);
  */
 
-import { useEffect } from "react";
-
-
-export default function Home(props) {
-  // useEffect(() => {
-  //   fetch('http://localhost:3333/episodes')
-  //     .then(response => response.json())
-  //     .then(data => console.log('episodes: ', data))
-  // }, []);
-
-  console.log(props.episodes)
-
-  return (
-    <>
-      < h1 > Hello World</h1 >
-      <p>{JSON.stringify(props.episodes)}</p>
-    </>
-  );
-}
-
 /**
- * Modelo SSR:
- * Essa solução carrega a cada execução da página.. isso pode gerar requests sem necessidades
- */
+* Modelo SSR:
+* Essa solução carrega a cada execução da página.. isso pode gerar requests sem necessidades
+*/
 //exportando essa função, a pagina sabe que deve executar antes de exibir para o usuario
 // export async function getServerSideProps() {
 //   const response = await fetch('http://localhost:3333/episodes')
@@ -47,6 +27,15 @@ export default function Home(props) {
 //     }
 //   }
 // }
+
+export default function Home(props) {
+  return (
+    <>
+      < h1 > Hello World</h1 >
+      <p>{JSON.stringify(props.episodes)}</p>
+    </>
+  );
+}
 
 /**
  * Modelo SSG:
