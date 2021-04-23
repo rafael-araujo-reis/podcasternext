@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useContext, useRef } from 'react';
+import { useContext, useRef, useEffect } from 'react';
 
 import { PlayerContext } from '../../contexts/PlayerContext';
 import styles from './styles.module.scss'
@@ -14,6 +14,18 @@ export function Player() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const { episodeList, currentEpisodeIndex, isPlaying, togglerPlay } = useContext(PlayerContext)
   const episode = episodeList[currentEpisodeIndex]
+
+  useEffect(() => {
+    if (!audioRef.current) {
+      return
+    }
+
+    if (isPlaying) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  })
 
   return (
     <div className={styles.playerContainer}>
