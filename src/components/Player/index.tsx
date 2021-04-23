@@ -1,7 +1,12 @@
 import Image from 'next/image';
 import { useContext } from 'react';
+
 import { PlayerContext } from '../../contexts/PlayerContext';
 import styles from './styles.module.scss'
+
+import Slider from 'rc-slider'
+import 'rc-slider/assets/index.css'
+
 
 export function Player() {
 
