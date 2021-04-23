@@ -12,7 +12,13 @@ export function Player() {
 
   // uma boa prática é iniciar o useRef como null
   const audioRef = useRef<HTMLAudioElement>(null);
-  const { episodeList, currentEpisodeIndex, isPlaying, togglerPlay } = useContext(PlayerContext)
+  const {
+    episodeList,
+    currentEpisodeIndex,
+    isPlaying,
+    togglerPlay,
+    setPlayingState
+  } = useContext(PlayerContext)
   const episode = episodeList[currentEpisodeIndex]
 
   useEffect(() => {
@@ -76,6 +82,8 @@ export function Player() {
             src={episode.url}
             autoPlay
             ref={audioRef}
+            onPlay={() => setPlayingState(true)}
+            onPause={() => setPlayingState(false)}
           />
         )}
 
