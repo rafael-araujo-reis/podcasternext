@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 
 import { PlayerContext } from '../../contexts/PlayerContext';
 import styles from './styles.module.scss'
@@ -10,7 +10,9 @@ import 'rc-slider/assets/index.css'
 
 export function Player() {
 
-  const { episodeList, currentEpisodeIndex } = useContext(PlayerContext)
+  // uma boa prática é iniciar o useRef como null
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const { episodeList, currentEpisodeIndex, isPlaying, togglerPlay } = useContext(PlayerContext)
   const episode = episodeList[currentEpisodeIndex]
 
   return (
@@ -58,7 +60,11 @@ export function Player() {
 
         {/* use-se nesse formato com && se quiser executar o IF e || se quiser executar o else apenas */}
         {episode && (
-          <audio src={episode.url} autoPlay></audio>
+          <audio
+            src={episode.url}
+            autoPlay
+            ref={audioRef}
+          />
         )}
 
         <div className={styles.buttons}>
@@ -68,8 +74,12 @@ export function Player() {
           <button type="button" disabled={!episode}>
             <img src="/play-previous.svg" alt="Tocar anterior" />
           </button>
-          <button type="button" disabled={!episode} className={styles.playerButton}>
-            <img src="/play.svg" alt="Tocar" />
+          <button type="button" disabled={!episode} className={styles.playerButton} onClick={togglerPlay}>
+            {isPlaying ? (
+              <img src="/pause.svg" alt="Pausar" />
+            ) : (
+              <img src="/play.svg" alt="Tocar" />
+            )}
           </button>
           <button type="button" disabled={!episode}>
             <img src="/play-next.svg" alt="Tocar próxima" />
