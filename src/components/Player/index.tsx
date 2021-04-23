@@ -54,8 +54,13 @@ export function Player() {
             )}
           </div>
           <span>00:00</span>
-
         </div>
+
+        {/* use-se nesse formato com && se quiser executar o IF e || se quiser executar o else apenas */}
+        {episode && (
+          <audio src={episode.url} autoPlay></audio>
+        )}
+
         <div className={styles.buttons}>
           <button type="button" disabled={!episode}>
             <img src="/shuffle.svg" alt="Embaralhar" />
