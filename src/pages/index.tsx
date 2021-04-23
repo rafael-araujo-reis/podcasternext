@@ -31,13 +31,17 @@
 import { GetStaticProps } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useContext } from 'react';
 
 import { api } from '../services/api';
 import { format, parseISO } from 'date-fns'
 import { ptBR } from 'date-fns/locale';
+
 import { convertDurationToTimeString } from '../utils/convertDurationToTimeString';
+import { PlayerContext } from '../contexts/PlayerContext';
 
 import styles from './home.module.scss'
+
 
 type Episode = {
   id: string,
@@ -55,10 +59,12 @@ type HomeProps = {
   allEpisodes: Episode[],
 }
 export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
+  const player = useContext(PlayerContext)
+
   return (
     <div className={styles.homepage}>
       <section className={styles.latestEpisodes}>
-        <h2>Últimos lançamentos</h2>
+        <h2>Últimos lançamentos {player}</h2>
         {/* o for it apenas percorre, o map percore e retorna */}
         <ul>
           {latestEpisodes.map(episode => {
