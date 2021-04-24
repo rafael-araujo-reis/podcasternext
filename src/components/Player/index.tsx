@@ -6,6 +6,7 @@ import styles from './styles.module.scss'
 
 import Slider from 'rc-slider'
 import 'rc-slider/assets/index.css'
+import { convertDurationToTimeString } from '../../utils/convertDurationToTimeString';
 
 
 export function Player() {
@@ -81,7 +82,7 @@ export function Player() {
               <div className={styles.emptySlider} />
             )}
           </div>
-          <span>00:00</span>
+          <span>{convertDurationToTimeString(episode?.duration ?? 0)}</span>
         </div>
 
         {/* use-se nesse formato com && se quiser executar o IF e || se quiser executar o else apenas */}
