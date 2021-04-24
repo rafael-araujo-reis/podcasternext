@@ -19,7 +19,9 @@ export function Player() {
     togglerPlay,
     playNext,
     playPrevious,
-    setPlayingState
+    setPlayingState,
+    hasPrevious,
+    hasNext
   } = useContext(PlayerContext)
   const episode = episodeList[currentEpisodeIndex]
 
@@ -93,8 +95,8 @@ export function Player() {
           <button type="button" disabled={!episode}>
             <img src="/shuffle.svg" alt="Embaralhar" />
           </button>
-          <button type="button" disabled={!episode}>
-            <img src="/play-previous.svg" alt="Tocar anterior" onClick={playPrevious} />
+          <button type="button" disabled={!episode || !hasPrevious} onClick={playPrevious} >
+            <img src="/play-previous.svg" alt="Tocar anterior" />
           </button>
           <button type="button" disabled={!episode} className={styles.playerButton} onClick={togglerPlay}>
             {isPlaying ? (
@@ -103,7 +105,7 @@ export function Player() {
               <img src="/play.svg" alt="Tocar" />
             )}
           </button>
-          <button type="button" disabled={!episode} onClick={playNext}>
+          <button type="button" disabled={!episode || !hasNext} onClick={playNext}>
             <img src="/play-next.svg" alt="Tocar próxima" />
           </button>
           <button type="button" disabled={!episode}>
