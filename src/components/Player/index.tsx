@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { useContext, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
-import { PlayerContext } from '../../contexts/PlayerContext';
+import { usePlayer } from '../../contexts/PlayerContext';
 import styles from './styles.module.scss'
 
 import Slider from 'rc-slider'
@@ -22,7 +22,7 @@ export function Player() {
     setPlayingState,
     hasPrevious,
     hasNext
-  } = useContext(PlayerContext)
+  } = usePlayer()
   const episode = episodeList[currentEpisodeIndex]
 
   useEffect(() => {
