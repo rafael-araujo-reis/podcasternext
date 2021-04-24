@@ -23,6 +23,11 @@ export function Player() {
     })
   }
 
+  function handleSeek(value: number) {
+    audioRef.current.currentTime = value;
+    setProgress(Math.floor(audioRef.current.currentTime))
+  }
+
   const {
     episodeList,
     currentEpisodeIndex,
@@ -89,6 +94,7 @@ export function Player() {
                 trackStyle={{ backgroundColor: '#04d361' }}
                 railStyle={{ backgroundColor: '#9f75ff' }}
                 handleStyle={{ borderColor: '#04d361', borderWidth: 4 }}
+                onChange={handleSeek}
               />
             ) : (
               <div className={styles.emptySlider} />
