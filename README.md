@@ -14,9 +14,7 @@
 </h1>
 
 <p align="center">
- <a href="#objetivo">Objetivo</a> •
  <a href="#tecnologias">Tecnologias</a> • 
- <a href="#contribuicao">Contribuição</a> • 
  <a href="#autor">Autor</a>
 </p>
 
@@ -34,7 +32,7 @@
 - [ ] Carregar podcasts (servidor)
 
 <h1 align="center">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./assets/banner.png" />
+  <img alt="Podcaster" title="#Podcaster" src="[./assets/banner.png](https://uploaddeimagens.com.br/imagens/LXQFy_8)" />
 </h1>
 
 ### 🛠 Tecnologias
@@ -54,7 +52,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
  <sub><b>Rafael Reis</b></sub></a> <a href="https://www.linkedin.com/in/rafael-araujo-reis/" title="Linkedin">🚀</a>
 
 
-Feito por Rafael Reis 👋🏽 Entre em contato!
+Feito por Rafael Reis 👋🏽  Entre em contato!
 
 [![Linkedin Badge](https://img.shields.io/badge/-Rafael-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rafael-araujo-reis/)](https://www.linkedin.com/in/rafael-araujo-reis/) 
 [![Gmail Badge](https://img.shields.io/badge/-rafa.araujoreis@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:rafa.araujoreis@gmail.com)](mailto:rafa.araujoreis@gmail.com)
