@@ -1,34 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Podcaster | NLW</h1>
 
-## Getting Started
+<p align="center">O Podcaster é um case realizado durante a imersão da NLW da Rocketseat.</p>
+<p align="center">O objetivo deste case é mergulhar nas tecnologias React, Next.js, TypeScript e Node.js e aprender conceitos, práticar a execução dessas tecnologias em um produto e entregar uma excelente experiência ao usuário</p>
+<br>
+<p align="center">O Podcaster é uma aplicação que traz os melhores conteúdos da Rocketseat, de uma forma organizada, clara e objetiva para que alunos avancem em seus conhecimentos em tecnologia</p>
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<h1 align="center">
+    <a href="https://pt-br.reactjs.org/">🔗 React</a>
+<a href="https://nodejs.org/en/">🔗 Node.js</a>
+<a href="https://nextjs.org/">🔗 Next.js</a>
+<a href="https://www.typescriptlang.org/">🔗 TypeScript</a>
+</h1>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p align="center">
+ <a href="#objetivo">Objetivo</a> •
+ <a href="#tecnologias">Tecnologias</a> • 
+ <a href="#contribuicao">Contribuição</a> • 
+ <a href="#autor">Autor</a>
+</p>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<h4 align="center"> 
+	🚧  Podcaster 🚀 em construção...  🚧
+</h4>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+###Features
+- [x] Carregar podcasts (mock)
+- [x] Escutar podcasts
+- [x] Controlar execução dos podcasts
+- [x] Controlar podcasts via teclado
+- [ ] Aplicar darkmode
+- [ ] Tornar a aplicação responsiva para mobile
+- [ ] Carregar podcasts (servidor)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<h1 align="center">
+  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./assets/banner.png" />
+</h1>
 
-## Learn More
+### 🛠 Tecnologias
 
-To learn more about Next.js, take a look at the following resources:
+As seguintes ferramentas foram usadas na construção do projeto:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [React](https://pt-br.reactjs.org/)
+- [Node.js](https://nodejs.org/en/)
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Autor
+---
+<a href="https://www.linkedin.com/in/rafael-araujo-reis/">
+ <img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4E03AQE0xtGqgN_LJg/profile-displayphoto-shrink_800_800/0/1523476311769?e=1625097600&v=beta&t=uSHybNJAra8b4OSVaVWP8YD8LPk3EeLUU8iKlcon51E" width="100px;" alt=""/>
+ <br />
+ <sub><b>Rafael Reis</b></sub></a> <a href="https://www.linkedin.com/in/rafael-araujo-reis/" title="Linkedin">🚀</a>
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Feito por Rafael Reis 👋🏽 Entre em contato!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[![Linkedin Badge](https://img.shields.io/badge/-Rafael-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rafael-araujo-reis/)](https://www.linkedin.com/in/rafael-araujo-reis/) 
+[![Gmail Badge](https://img.shields.io/badge/-rafa.araujoreis@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:rafa.araujoreis@gmail.com)](mailto:rafa.araujoreis@gmail.com)
