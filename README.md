@@ -32,7 +32,7 @@
 - [ ] Carregar podcasts (servidor)
 
 <h1 align="center">
-  <img alt="Podcaster" title="#Podcaster" src="[./assets/banner.png](https://uploaddeimagens.com.br/imagens/LXQFy_8)" />
+  <img alt="Podcaster" title="#Podcaster" src="https://uploaddeimagens.com.br/imagens/LXQFy_8" />
 </h1>
 
 ### 🛠 Tecnologias
