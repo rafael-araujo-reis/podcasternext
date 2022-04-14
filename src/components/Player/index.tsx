@@ -2,10 +2,10 @@ import Image from 'next/image';
 import { useRef, useEffect, useState } from 'react';
 
 import { usePlayer } from '../../contexts/PlayerContext';
-import styles from './styles.module.scss'
+import styles from './styles.module.scss';
 
-import Slider from 'rc-slider'
-import 'rc-slider/assets/index.css'
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 import { convertDurationToTimeString } from '../../utils/convertDurationToTimeString';
 
 
@@ -19,20 +19,20 @@ export function Player() {
   function setupProgressListener() {
     audioRef.current.currentTime = 0;
     audioRef.current.addEventListener('timeupdate', () => {
-      setProgress(Math.floor(audioRef.current.currentTime))
-    })
+      setProgress(Math.floor(audioRef.current.currentTime));
+    });
   }
 
   function handleSeek(value: number) {
     audioRef.current.currentTime = value;
-    setProgress(Math.floor(audioRef.current.currentTime))
+    setProgress(Math.floor(audioRef.current.currentTime));
   }
 
   function handleEpisodeEnded() {
     if (hasNext) {
-      playNext()
+      playNext();
     } else {
-      clearPlayerState()
+      clearPlayerState();
     }
   }
 
@@ -51,12 +51,12 @@ export function Player() {
     setPlayingState,
     hasPrevious,
     hasNext
-  } = usePlayer()
-  const episode = episodeList[currentEpisodeIndex]
+  } = usePlayer();
+  const episode = episodeList[currentEpisodeIndex];
 
   useEffect(() => {
     if (!audioRef.current) {
-      return
+      return;
     }
 
     if (isPlaying) {
@@ -64,7 +64,7 @@ export function Player() {
     } else {
       audioRef.current.pause();
     }
-  })
+  });
 
   return (
     <div className={styles.playerContainer}>
@@ -75,7 +75,7 @@ export function Player() {
       </header>
 
 
-      { episode ? (
+      {episode ? (
         <div className={styles.currentEpisode}>
           <Image
             width={592}
